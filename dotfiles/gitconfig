@@ -1,5 +1,5 @@
 [core]
-editor = mate --wait --line 1 --name 'Git Commit Message'
+editor = vim --wait --line 1 --name 'Git Commit Message'
 excludesfile = ~/.gitignore
 autocrlf = input
 filemode = false
@@ -24,25 +24,6 @@ unassume = update-index --no-assume-unchanged
 
 [status]
 relativepaths = false
-
-[difftool "Kaleidoscope"]
-cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-
-[diff]
-tool = Kaleidoscope
-
-[difftool]
-prompt = false
-
-[mergetool "Kaleidoscope"]
-cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-trustExitCode = true
-
-[mergetool]
-prompt = false
-
-[merge]
-tool = Kaleidoscope
 
 [push]
 default = matching
