@@ -8,11 +8,11 @@ TM_GIT = "/usr/local/bin/git"
 TM_RUBY = "/usr/local/var/rbenv/shims/ruby"
 
 # File showing/hiding
-# Browser -> the textmate project folder UI column
+# Browser -> The TextMate project folder UI column
 # FileChooser -> The Go To File ⌘T panel
 # FolderSearch -> The Find ⌘F dialog
 
-myExtraExcludes       = "vendor,tmp,venv"
+myExtraExcludes       = "vendor,tmp,venv,node_modules"
 myExtraSearchExcludes = "log,bin,script,app/assets/javascripts/lib,app/assets/javascripts/require.js,app/assets/fonts"
 myExtraIncludes       = ".env,.htaccess,.gitignore,.slugignore,.ruby-version"
 
@@ -32,7 +32,7 @@ includeInFolderSearch = "{$includeInFolderSearch,$myExtraIncludes}"
 # YOU CAN NOT DO THIS [ source, source.php ]
 # EVERY RULE MUST BE SEPERATE
 
-[ "*.{txt,md,mdown,markdown}" ]
+[ "*.{md,mdown,markdown}" ]
 softWrap = true
 fileType = "text.markdown"
 

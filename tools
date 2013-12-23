@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+puts "Installing favorite tools..."
+
+fav_tools = %w[
+  git
+  imagemagick
+  jpeg
+  node
+  openssl
+  pngcrush
+  python
+  rbenv
+  ruby-build
+  ssh-copy-id
+  tree
+  wget
+]
+
+system "brew update"
+system "brew install #{fav_tools.join(" ")}"
+system "brew upgrade"
+
+# Use the newest OpenSSL and Mozilla certs
+system "brew link openssl --force"
+system "brew install curl-ca-bundle"
+
+# Install Heroku Toolbelt
+system "wget -qO- https://toolbelt.heroku.com/install.sh | sh"
+
+puts "Tools installed ✔"
