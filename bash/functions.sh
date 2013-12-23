@@ -4,6 +4,7 @@
 
 # Shorthand commands
 alias fs="foreman start"
+alias fr="foreman run"
 alias hc="heroku run rails console"
 alias htail="heroku logs --tail"
 alias hps="heroku ps"
