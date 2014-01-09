@@ -66,12 +66,6 @@ chflags hidden ~/Public
 # Four-letter codes for views modes: `icnv`, `Nlsv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# Show no mounted media on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
-
 # -----------------------------------------------------------------------------
 # SHEETS/PANELS
 # -----------------------------------------------------------------------------
@@ -113,9 +107,6 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Disable Time Machine prompts when attaching USB media
-defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
 # -----------------------------------------------------------------------------
 # ITUNES
 # -----------------------------------------------------------------------------
@@ -143,10 +134,6 @@ defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 48
 defaults write com.apple.BluetoothAudioAgent "Stream - Flush Ring on Packet Drop (editable)" 30
 defaults write com.apple.BluetoothAudioAgent "Stream - Max Outstanding Packets (editable)" 15
 defaults write com.apple.BluetoothAudioAgent "Stream Resume Delay" "0.75"
-
-# Speed up Magic Mice
-# The maximum available in the preference pane is 3.0
-defaults write -g com.apple.mouse.scaling 5.0
 
 # -----------------------------------------------------------------------------
 # MISC
