@@ -10,6 +10,11 @@ alias htail="heroku logs --tail"
 alias hps="heroku ps"
 alias hadd="heroku config:add"
 
+# Print out the Heroku config as if it was a .env file
+function henv {
+  heroku config | sed -E "s/:[[:space:]]+/=/g" | tail -n +2
+}
+
 # Migrate Heroku DB and restart
 function hmigrate {
   heroku pgbackups:capture --expire && \
