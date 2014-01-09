@@ -62,6 +62,12 @@ function hdeploy {
   fi
 }
 
+# Print out the Heroku config as if it was a .env file
+function henv () {
+  heroku config | sed -E "s/:[[:space:]]+/=/g" | tail -n +2
+}
+
+
 # -----------------------------------------------------------------------------
 # POSTGRES
 # -----------------------------------------------------------------------------
@@ -134,14 +140,12 @@ function railsup {
   git config core.ignorecase false
 
   echo "Creating .env"
+  echo "PORT=8080" >> ".env"
+  echo "DATABASE_URL=postgres://localhost/DATABASE" >> ".env"
+  echo "RACK_ENV=development" >> ".env"
+  echo "RAILS_ENV=development" >> ".env"
+  mate "."
   mate ".env"
-
-  echo "Creating config/database.yml"
-  "config/database.yml" << echo "development:"
-  "config/database.yml" << echo "  adapter: postgresql"
-  "config/database.yml" << echo "  database:"
-  "config/database.yml" << echo "  host: localhost"
-  mate "config/database.yml"
 
   echo "Creating tmp/cache"
   mkdir "tmp"
@@ -175,6 +179,14 @@ function venv {
   source venv/bin/activate
   export PS1="\n\[$(tput setaf 2)\]VIRTUAL ⚡ \[$(tput sgr0)\]"
 }
+
+# -----------------------------------------------------------------------------
+# WOW
+# -----------------------------------------------------------------------------
+
+alias wow="git status --short --branch"
+alias such="git"
+alias very="git"
 
 # -----------------------------------------------------------------------------
 # OSX/UNIX
