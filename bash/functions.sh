@@ -276,8 +276,3 @@ function relaunch () {
     open -a $app
   done
 }
-
-# App Zapper an app
-function zap () {
-  open -a AppZapper /Applications/"${1}".app
-}
