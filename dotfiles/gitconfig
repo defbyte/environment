@@ -1,5 +1,5 @@
 [core]
-editor = vim --wait --line 1 --name 'Git Commit Message'
+editor = mate --wait --line 1 --name 'Git Commit Message'
 excludesfile = ~/.gitignore
 autocrlf = input
 filemode = false
