@@ -11,6 +11,7 @@ fav_tools = %w[
   openssl
   pngcrush
   python
+  python26
   rbenv
   ruby-build
   ssh-copy-id
