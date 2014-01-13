@@ -170,7 +170,7 @@ function uninstall-all-gems {
 # -----------------------------------------------------------------------------
 
 # Alias Python 2.6 - we will have Python 2.6 and 2.7 living together via Homebrew
-alias python2.6="/usr/local/Cellar/python26/2.6.9/bin/python2.6"
+alias python26="/usr/local/Cellar/python26/2.6.9/bin/python2.6"
 
 # -----------------------------------------------------------------------------
 # DJANGO
