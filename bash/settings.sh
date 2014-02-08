@@ -1,3 +1,6 @@
+# Colors please
+export CLICOLOR=1
+
 # Big, big history
 export HISTSIZE=35000
 export HISTFILESIZE=$HISTSIZE
