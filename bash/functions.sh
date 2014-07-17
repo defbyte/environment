@@ -96,6 +96,21 @@ function hpgpull {
   echo "✔ Local database $1 overwritten with production data"
 }
 
+# Drop and create a local database. will use whoami for owner name if none passed as second arg
+function recreatedb {
+  dbowner=`whoami`
+  if [ -z "$1" ]; then
+	  echo "First argument must be database name."
+  else
+    if [ ! -z "$2" ]; then
+      dbowner=$2
+    fi
+    dropdb $1
+    createdb -O $dbowner $1 --encoding="utf-8" --template="template0"
+    echo "✔ Local database $1 recreated with $dbowner owner"
+  fi
+}
+
 # -----------------------------------------------------------------------------
 # RAILS
 # -----------------------------------------------------------------------------
