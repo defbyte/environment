@@ -226,6 +226,14 @@ function venv {
 alias la="ls -lA"
 alias ax="chmod a+x"
 
+# Create a 2048-bit certificate key and CSR
+function gen-csr {
+  openssl genrsa -des3 -out server.locked.key 2048 && \
+  openssl rsa -in server.locked.key -out server.key && \
+  rm server.locked.key && \
+  openssl req -nodes -new -key server.key -out server.csr
+}
+
 # Change to personal ~/Projects folder
 function p () {
   cd $HOME/Projects
