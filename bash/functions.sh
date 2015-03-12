@@ -234,9 +234,9 @@ function gen-csr {
   openssl req -nodes -new -key server.key -out server.csr
 }
 
-# Change to personal ~/Projects folder
+# Change to personal ~/workspace folder
 function p () {
-  cd $HOME/Projects
+  cd $HOME/workspace
   pwd
 }
 
@@ -325,4 +325,8 @@ function relaunch () {
     sleep 2;
     open -a $app
   done
+}
+
+function ohchrome {
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" "http://0.0.0.0:8080" &> /dev/null
 }
