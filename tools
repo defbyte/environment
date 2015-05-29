@@ -17,6 +17,7 @@ fav_tools = %w[
   ssh-copy-id
   tree
   wget
+  the fuck
 ]
 
 system "brew update"

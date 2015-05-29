@@ -226,6 +226,9 @@ function venv {
 alias la="ls -lA"
 alias ax="chmod a+x"
 
+# The Fuck
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+
 # Create a 2048-bit certificate key and CSR
 function gen-csr {
   openssl genrsa -des3 -out server.locked.key 2048 && \
