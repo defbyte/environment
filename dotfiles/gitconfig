@@ -21,6 +21,7 @@ m = commit
 new = checkout -b
 s = status --short --branch
 unassume = update-index --no-assume-unchanged
+unadd = reset HEAD
 
 [status]
 relativepaths = false
