@@ -224,10 +224,18 @@ function venv {
 
 # Shorthand
 alias la="ls -lA"
+alias lah="ls -lAh"
 alias ax="chmod a+x"
 
-# The Fuck
-alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+# Find biggest directories in current directory
+function find-biggest-directories {
+  find . -type d -print0 | xargs -0 du | sort -n | tail -20 | cut -f2 | xargs -I{} du -sh {}
+}
+
+# Find biggest files in current directory
+function find-biggest-files {
+  find . -type f -print0 | xargs -0 du | sort -n | tail -20 | cut -f2 | xargs -I{} du -sh {}
+}
 
 # Create a 2048-bit certificate key and CSR
 function gen-csr {
