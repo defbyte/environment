@@ -191,27 +191,6 @@ alias python26="/usr/local/Cellar/python26/2.6.9/bin/python2.6"
 # DJANGO
 # -----------------------------------------------------------------------------
 
-# Shorthand commands
-alias manage="python manage.py"
-alias localpip="pip install -r requirements.txt"
-alias runserver="manage runserver 0.0.0.0:8000"
-
-function mkvenv26 {
-  if [ -z "$1" ] ; then
-    echo "Please supply the directory name to crete the venv"
-  else
-    virtualenv --distribute --no-site-packages --python=/usr/local/Cellar/python26/2.6.9/bin/python2.6 $1
-  fi
-}
-
-function mkvenv27 {
-  if [ -z "$1" ] ; then
-    echo "Please supply the directory name to crete the venv"
-  else
-    virtualenv --distribute --no-site-packages --python=python2.7 $1
-  fi
-}
-
 # Activate the venv, but give me back my pretty prompt
 function venv {
   source venv/bin/activate
