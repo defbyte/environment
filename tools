@@ -4,7 +4,9 @@
 puts "Installing favorite tools..."
 
 fav_tools = %w[
+  awscli
   git
+  heroku
   imagemagick
   jpeg
   node
@@ -17,7 +19,6 @@ fav_tools = %w[
   ssh-copy-id
   tree
   wget
-  the fuck
 ]
 
 system "brew update"
