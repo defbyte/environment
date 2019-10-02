@@ -33,20 +33,12 @@ defaults write -globalDomain NSUseAnimatedFocusRing -bool NO
 # DOCK
 # -----------------------------------------------------------------------------
 
-# Enable the 2D Dock
-defaults write com.apple.dock no-glass -bool true
-
-# Set the icon size of Dock items to 44 pixels
-defaults write com.apple.dock tilesize -int 44
-
 # Show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
 
 # Use the scale effect for window minimizing
 defaults write com.apple.dock mineffect scale
 
-# Speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # -----------------------------------------------------------------------------
 # FINDER
@@ -64,9 +56,6 @@ chflags nohidden ~/Library
 # Hide the ~/Public folder
 chflags hidden ~/Public
 
-# Hide the ~/Movies folder
-chflags hidden ~/Movies
-
 # Hide the ~/Music folder (iTunes manages this folder, look not upon the horrors within)
 chflags hidden ~/Music
 
@@ -74,11 +63,6 @@ chflags hidden ~/Music
 # Four-letter codes for views modes: `icnv`, `Nlsv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# Show no mounted media on the desktop
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # -----------------------------------------------------------------------------
 # SHEETS/PANELS
@@ -100,10 +84,6 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # SCREENSHOTS
 # -----------------------------------------------------------------------------
 
-# Save screenshots to ~/Pictures/Screengrabs
-mkdir ~/Pictures/Screengrabs
-defaults write com.apple.screencapture location -string "$HOME/Pictures/Screengrabs"
-
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
@@ -117,12 +97,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Disable Time Machine prompts when attaching USB media
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# -----------------------------------------------------------------------------
-# ITUNES
-# -----------------------------------------------------------------------------
-
-# Make ⌘ + F focus the search input in iTunes
-defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 # -----------------------------------------------------------------------------
 # HARDWARE
