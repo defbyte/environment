@@ -185,14 +185,9 @@ function yarn-implode {
 # -----------------------------------------------------------------------------
 
 # Shorthand
-alias la="ls -abGHlLOpPW"
+alias la="ls -lA"
+alias lah="ls -lAh"
 alias ax="chmod a+x"
-alias openssl="/usr/local/opt/openssl/bin/openssl"
-
-function work {
-  cd $1
-  atom ./
-}
 
 # Create a certificate key and CSR.
 # The server provided is only used to help set file names.
@@ -222,16 +217,6 @@ function brew-sync {
 # Remove files in the current folder that are conflicted from Dropbox
 function remove-conflicted-copies {
   find ./ -name "*conflicted copy*" -depth -exec rm {} \;
-}
-
-# Download a YouTube video as an MP3 audio file
-function youtube-mp3 {
-  youtube-dl --prefer-ffmpeg --extract-audio --audio-format mp3 "$1"
-}
-
-# Download a YouTube video as an MP4 video (don’t download webm)
-function youtube-mp4 {
-  youtube-dl --format 38/37/22/35/34/18/6/5/17/13 "$1"
 }
 
 # Find biggest directories in current directory

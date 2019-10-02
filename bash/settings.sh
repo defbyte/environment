@@ -1,3 +1,6 @@
+# Colors please
+export CLICOLOR=1
+
 # Big, big history
 export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
@@ -14,8 +17,8 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
-# Editor, use Atom
-export EDITOR="/usr/local/bin/atom --wait"
+# Editor, use TextMate
+export EDITOR="/usr/local/bin/mate -w"
 
 # Don't clear the screen after quitting a manual page
 export MANPAGER="less --no-init"
@@ -24,14 +27,14 @@ export MANPAGER="less --no-init"
 export DISABLE_SPRING="true"
 
 # Let GPG know where the tty is
-export GPG_TTY=$(tty)
+#export GPG_TTY=$(tty)
 
 # Configure Git committer and GPG settings.
 # A few programs seem to be unsetting this, so set it on new sessions.
-git config --global user.name "Corey Csuhta"
-git config --global user.email "git@cjcsuhta.com"
-git config --global commit.gpgsign true
-git config --global user.signingkey "A219690A"
+git config --global user.name "Chris Davis"
+git config --global user.email "defbyte@gmail.com"
+#git config --global commit.gpgsign true
+#git config --global user.signingkey "XXX"
 
 # Commands that run each time a prompt is generated
 export PROMPT_COMMAND="prompt-command; $PROMPT_COMMAND"
