@@ -47,3 +47,6 @@ function prompt-command {
   # Set window title to be the current directory
   echo -ne "\033]0;${PWD##*/}\007";
 }
+
+# Bash Completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

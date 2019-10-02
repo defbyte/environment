@@ -3,6 +3,7 @@
 puts "Installing favorite tools..."
 
 fav_packages = %w[
+  bash-completion
   chruby
   ffmpeg
   git
@@ -17,7 +18,6 @@ fav_packages = %w[
   ssh-copy-id
   tree
   wget
-  youtube-dl
 ]
 
 system "brew update"
