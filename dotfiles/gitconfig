@@ -29,3 +29,7 @@
 
 [push]
 	default = matching
+
+[user]
+	name = Chris Davis
+	email = defbyte@gmail.com
