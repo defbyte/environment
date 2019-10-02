@@ -12,6 +12,7 @@ fav_packages = %w[
   node
   openssl
   pngcrush
+  pyenv
   ruby-install
   ssh-copy-id
   tree
