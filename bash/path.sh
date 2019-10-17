@@ -6,8 +6,9 @@ export NODE_PATH="/usr/local/share/npm/bin"
 export OSX_PATH="/usr/bin:/usr/sbin:/bin:/sbin"
 export NVM_DIR="$HOME/.nvm"
 export PYENV_PATH="$HOME/.pyenv"
+export VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export PATH="$PYENV_PATH/bin:$PG_PATH:$USR_PATH:$NODE_PATH:$OSX_PATH"
+export PATH="$PYENV_PATH/bin:$VSCODE_PATH:$PG_PATH:$USR_PATH:$NODE_PATH:$OSX_PATH"
 export CDPATH=".:~:~/Projects"
 
 # Activate chruby and the .ruby-version auto-switcher

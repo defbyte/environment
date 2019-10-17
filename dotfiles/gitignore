@@ -1,6 +1,7 @@
 # Project files
 *.tmproj
 *.esproj
+*.vscode
 *~
 node_modules
 vim/.netrwhist
