@@ -12,7 +12,7 @@
 	aa = add --all
 	assume = update-index --assume-unchanged
 	b = branch --verbose --verbose # Sending the option twice is not a typo
-    brances = branch --verbose --verbose # Sending the option twice is not a typo
+    branches = branch --verbose --verbose # Sending the option twice is not a typo
 	co = checkout
 	del = branch --delete
 	delete = branch --delete
