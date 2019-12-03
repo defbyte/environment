@@ -17,8 +17,7 @@ export CDPATH=".:~:~/Projects"
 #source /usr/local/opt/chruby/share/chruby/auto.sh
 
 # Activate nvm and the .nvmrc version switcher
-
-#source $NVM_DIR/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Activate pyenv
 eval "$(pyenv init -)"
