@@ -185,7 +185,7 @@ function yarn-implode {
 # -----------------------------------------------------------------------------
 
 # Shorthand
-alias la="ls -lA"
+alias la="ls -hAlt"
 alias lah="ls -lAh"
 alias ax="chmod a+x"
 
