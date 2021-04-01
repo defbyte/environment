@@ -50,3 +50,10 @@ function prompt-command {
 
 # Bash Completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+# OpenSSL Compiler Flags
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+# Require Virtualenv for pip install anything
+export PIP_REQUIRE_VIRTUALENV=true
